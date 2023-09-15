@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <br>
+  <div align="center">Введите число : <input type="text" class="inputType"></div>
+  <br>
+  <div align="center">Полученное число : <input type="text" class="output"></div>
+  <br>
+  <div align="center"><button type="button" class="resultBtn" onclick="result()">Просчитать</button></div>
+  <script>
+    let output = document.querySelector('.output');
+
+    function result() {
+      let inputValue = document.querySelector('.inputType').value;
+      let sum = 0;
+      for (let i = 0; i <= inputValue; i++) {
+        if (i % 7 === 0) {
+          sum += i;
+        }
+      }
+      output.value = sum;
+    }
+  </script>
+</body>
+<!-- Написать сценарий вычисления суммы чисел, кратных 7 в заданном интервале. -->
+
 </html>

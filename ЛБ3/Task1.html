@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAXandMIN</title>
+  </head>
+  <body>
+    <form align="center" name="form1">
+      Введите первое число: <input class="firstNmb" type="text" /> <br />
+      <hr />
+      Введите второе число: <input class="secondNmb" type="text" /> <br />
+      <hr />
+      Введите третье число: <input class="thirdNmb" type="text" /> <br />
+      <hr />
+      <p>Максимальное число: <input class="maxValue" type="text" size="20" /></p>
+      <p>Минимальное число: <input class="minValue" type="text" size="20" /></p>
+      <p>
+        <input type="button" value="Максимальное" onclick="max1()" />
+        <input type="button" value="Минимальное" onclick="min1()" />
+        <input type="reset" value="Стереть" /><br />
+      </p>
+    </form>
+
+    <script>
+      function max1() {
+        var first = document.querySelector('.firstNmb').value;
+        var second = document.querySelector('.secondNmb').value;
+        var third = document.querySelector('.thirdNmb').value;
+        var maxValue = document.querySelector('.maxValue');
+        var result = Math.max(first, second, third);
+        maxValue.value = result;
+      }
+      function min1() {
+        var first = document.querySelector('.firstNmb').value;
+        var second = document.querySelector('.secondNmb').value;
+        var third = document.querySelector('.thirdNmb').value;
+        var minValue = document.querySelector('.minValue');
+        var result = Math.min(first, second, third);
+        minValue.value = result;
+      }
+    </script>
+  </body>
+</html>

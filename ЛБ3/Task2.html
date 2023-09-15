@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>КварталПоНомеруМесяца</title>
+  </head>
+  <body>
+    <div align="center">Введите номер месяца: <input type="text" class="monthNumber" /></div>
+
+    <p align="center">Номер квартала: <input type="text" class="kvartal" size="40" center /></p>
+    <div align="center"><button class="btn" type="button">Посчитать</button></div>
+  </body>
+  <script>
+    let btn = document.querySelector('.btn');
+    let monthNumber = document.querySelector('.monthNumber');
+    let kvartal = document.querySelector('.kvartal');
+
+    btn.onclick = function () {
+      let monthValue = monthNumber.value;
+      if (monthValue <= 3) {
+        // kvartal.value = '';
+        kvartal.value = 1;
+      } else if (6 >= monthValue && monthValue > 3) {
+        kvartal.value = 2;
+      } else if (9 >= monthValue && monthValue > 6) {
+        kvartal.value = 3;
+      } else if (12 >= monthValue && monthValue > 9) {
+        kvartal.value = 4;
+      } else {
+        kvartal.value = '';
+        kvartal.value = kvartal.value + 'Введите число от 1 до 12';
+      }
+    };
+  </script>
+</html>

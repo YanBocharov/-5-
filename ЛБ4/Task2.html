@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Написать сценарий сортировки массива по возрастанию.</title>
+</head>
+
+<body>
+    <div>Массив: <span class="text"></span></div>
+</body>
+<script>
+    let text = document.querySelector('.text');
+
+    let newArr = Array.from({
+        length: 30
+    }, () => Math.floor(Math.random() * 30));
+
+    text.innerHTML = newArr.sort(compareNumbers);
+
+    function compareNumbers(a, b) {
+        return a - b;
+    }
+</script>
+
+</html>

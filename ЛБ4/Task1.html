@@ -8,15 +8,27 @@
 </head>
 
 <body>
-
+    <div>Массив: <span class="text"></span></div>
+    <hr>
+    <div>Количество максимальных элементов массива: <span class="input"></span>
+    </div>
 </body>
 <script>
+    let text = document.querySelector('.text');
+    let mass = document.querySelector('.mass');
+    let input = document.querySelector('.input');
     let newArr = Array.from({
-        length: 40
-    }, () => Math.floor(Math.random() * 40));
+        length: 30
+    }, () => Math.floor(Math.random() * 30));
 
     let max = newArr.filter(item => item === Math.max(...newArr)).length;
-    console.log(max)
+    // mass.value = newArr;
+    input.innerHTML = max;
+    text.innerHTML = newArr.sort(compareNumbers);
+
+    function compareNumbers(a, b) {
+        return a - b;
+    }
 </script>
 
 </html>

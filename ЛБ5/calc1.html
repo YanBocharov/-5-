@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание сценариев с использованием переключателей</title>
+</head>
+
+<body>
+    <form name="form1">
+        Введите первое значение <input class="nmb1" type="text"><br><br>
+        Введите второе значение <input class="nmb2" type="text"><br><br>
+        <div>
+            <input type="radio" id="plus" name="contact">
+            <label for="plus">Сложение</label>
+            <br>
+            <input type="radio" id="minus" name="contact">
+            <label for="minus">Вычитание</label>
+            <br>
+            <input type="radio" id="ymnojit" name="contact">
+            <label for="ymnojit">Умножение</label>
+            <br>
+            <input type="radio" id="delenie" name="contact">
+            <label for="delenie">Деление</label>
+            <br>
+        </div>
+        <br>
+        Результат <input class="result" type="text"><br><br>
+        <input type="reset" value="Отмена">
+    </form>
+</body>
+<script>
+    function Plus(a, b) {
+        return a + b;
+    }
+</script>
+
+</html>

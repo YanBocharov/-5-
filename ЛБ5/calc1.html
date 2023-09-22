@@ -9,19 +9,19 @@
 
 <body>
     <form name="form1">
-        Введите первое значение <input class="nmb1" type="text"><br><br>
-        Введите второе значение <input class="nmb2" type="text"><br><br>
+        Введите первое значение <input class="nmb1" type="number"><br><br>
+        Введите второе значение <input class="nmb2" type="number"><br><br>
         <div>
-            <input type="radio" id="plus" name="contact">
+            <input type="radio" name="contact" onclick="Plus()">
             <label for="plus">Сложение</label>
             <br>
-            <input type="radio" id="minus" name="contact">
+            <input type="radio" name="contact" onclick="Minus()">
             <label for="minus">Вычитание</label>
             <br>
-            <input type="radio" id="ymnojit" name="contact">
+            <input type="radio" name="contact" onclick="Ymnojit()">
             <label for="ymnojit">Умножение</label>
             <br>
-            <input type="radio" id="delenie" name="contact">
+            <input type="radio" name="contact" onclick="Delenie()">
             <label for="delenie">Деление</label>
             <br>
         </div>
@@ -31,8 +31,30 @@
     </form>
 </body>
 <script>
-    function Plus(a, b) {
-        return a + b;
+    let result = document.querySelector('.result');
+
+    function Plus() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value + +secondNumber.value;
+    }
+
+    function Minus() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value - +secondNumber.value;
+    }
+
+    function Ymnojit() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value * +secondNumber.value;
+    }
+
+    function Delenie() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value / +secondNumber.value;
     }
 </script>
 

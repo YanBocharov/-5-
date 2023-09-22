@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СОЗДАНИЕ СЦЕНАРИЕВ С ИСПОЛЬЗОВАНИЕМ ФЛАЖКОВ</title>
+</head>
+
+<body>
+    <form name="form1">
+        Введите первое значение <input class="nmb1" type="number"><br><br>
+        Введите второе значение <input class="nmb2" type="number"><br><br>
+        <div>
+            <input type="checkbox" name="contact" onclick="Plus()">
+            <label for="plus">Сложение</label>
+            <br>
+            <input type="checkbox" name="contact" onclick="Minus()">
+            <label for="minus">Вычитание</label>
+            <br>
+            <input type="checkbox" name="contact" onclick="Ymnojit()">
+            <label for="ymnojit">Умножение</label>
+            <br>
+            <input type="checkbox" name="contact" onclick="Delenie()">
+            <label for="delenie">Деление</label>
+            <br>
+        </div>
+        <br>
+        Результат <input class="result" type="text"><br><br>
+        <input type="reset" value="Отмена">
+    </form>
+</body>
+<script>
+    let result = document.querySelector('.result');
+
+    function Plus() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value + +secondNumber.value;
+    }
+
+    function Minus() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value - +secondNumber.value;
+    }
+
+    function Ymnojit() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value * +secondNumber.value;
+    }
+
+    function Delenie() {
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        return result.value = +firstNumber.value / +secondNumber.value;
+    }
+</script>
+
+</html>

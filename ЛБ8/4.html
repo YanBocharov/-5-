@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center;">Умножение</div>
+    <br>
+    <form name="form1">
+        Первое число <input type="number" class="nmb1"><br><br>
+        Второе число <input type="number" class="nmb2"><br><br>
+        Результат <input type="text" class="result"><br><br>
+        <button class="button" type="button" onclick="func()">Посчитать</button>
+        <button class="reset" type="reset">Сбросить</button>
+    </form>
+</body>
+<script>
+    let firstNumber = document.querySelector('.nmb1');
+    let secondNumber = document.querySelector('.nmb2');
+    let result = document.querySelector('.result');
+
+    function func() {
+        return result.value = +firstNumber.value * +secondNumber.value;
+    }
+</script>
+
+</html>

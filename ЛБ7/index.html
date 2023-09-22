@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form1">
+        Первое число <input type="number" class="nmb1">
+        Второе число <input type="number" class="nmb2">
+        <br><br>
+        <div>
+            Выберите действие <br><br>
+            <select name="forma" size=1>
+                <option class="plus" value=0> Сложение
+                <option class="minus" value=1> Вычитание
+                <option class="delenie" value=2> Деление
+                <option class="ymnojit" value=3> Умножение
+            </select>
+            <br><br>
+        </div>
+        Получившееся число <input type="text" class="result">
+        <button type='button' class="button">Посчитать</иhref=>
+    </form>
+</body>
+<script>
+    let btn = document.querySelector('.button');
+    let result = document.querySelector('.result');
+    btn.onclick = function () {
+        let plus = document.querySelector('.plus');
+        let minus = document.querySelector('.minus');
+        let delenie = document.querySelector('.delenie');
+        let ymnojit = document.querySelector('.ymnojit');
+        let firstNumber = document.querySelector('.nmb1');
+        let secondNumber = document.querySelector('.nmb2');
+        if (plus.selected) {
+            return result.value = +firstNumber.value + +secondNumber.value;
+        }
+        if (minus.selected) {
+            return result.value = +firstNumber.value - +secondNumber.value;
+        }
+        if (delenie.selected) {
+            return result.value = +firstNumber.value / +secondNumber.value;
+        }
+        if (ymnojit.selected) {
+            return result.value = +firstNumber.value * +secondNumber.value;
+        }
+    }
+</script>
+
+</html>
